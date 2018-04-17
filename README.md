@@ -23,9 +23,13 @@ Jails/Container:
 - Firejail
 - Docker for Collabora
 
+DB- and Caching-Services:
+- MariaDB
+- Redis
+- Memcached
+
 Web-Services:
 - NGINX with Modsecurity
-- MariaDB
 - PHP7.2-fpm
 
 Mail-Services:
@@ -50,8 +54,10 @@ Monitoring
 - monit
 - logwatch
 
-Malware, IDS, IPS:
-- Malware: rkhunter, maldet
+Malware-Detection, IDS, IPS:
+- rkhunter
+- maldet
+- auditd
 
 tbc
 
