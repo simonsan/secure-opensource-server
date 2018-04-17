@@ -1,0 +1,51 @@
+# Last Modified: Sun Apr 15 14:38:19 2018
+#include <tunables/global>
+
+/usr/sbin/nginx {
+  #include <abstractions/base>
+  #include <abstractions/nameservice>
+
+  # Caps for NGINX as root, better run it as unprivileged user on a higher port and use nat redirect-to 
+  #icapability chown,
+  #capability dac_override,
+  #capability net_bind_service,
+  #capability setgid,
+  #capability setuid,
+
+  # Standard paths of ModSecurity, SSL and NGINX - Change for your needs
+  /etc/nginx/fastcgi_params r,
+  /etc/nginx/global/restrictions.conf r,
+  /etc/nginx/global/ssl.conf r,
+  /etc/nginx/mime.types r,
+  /etc/nginx/modsec/main.conf r,
+  /etc/nginx/modsec/modsecurity.conf r,
+  /etc/nginx/modsec/owasp-modsecurity-crs/crs-setup.conf r,
+  /etc/nginx/modsec/owasp-modsecurity-crs/rules/ r,
+  /etc/nginx/modsec/owasp-modsecurity-crs/rules/* r,
+  /etc/nginx/modsec/owasp-modsecurity-crs/rules/*.conf r,
+  /etc/nginx/nginx.conf r,
+  /etc/nginx/sites-available/default r,
+  /etc/nginx/sites-enabled/ r,
+  /etc/nginx/ssl/dhparam.pem r,
+  /etc/ssl/openssl.cnf r,
+  /lib/x86_64-linux-gnu/ld-*.so mr,
+  /run/nginx.pid rw,
+  /run/nginx/nginx.pid rw,
+  /usr/lib/nginx/modules/ngx_http_modsecurity_module.so mr,
+  /usr/local/modsecurity/lib/libmodsecurity.so.* mr,
+  /usr/sbin/nginx mr,
+  /usr/share/nginx/html/50x.html r,
+  /usr/share/nginx/html/index.html r,
+  /var/cache/nginx/client_temp/ w,
+  /var/cache/nginx/fastcgi_temp/ w,
+  /var/cache/nginx/proxy_temp/ w,
+  /var/cache/nginx/scgi_temp/ w,
+  /var/cache/nginx/uwsgi_temp/ w,
+  /var/log/modsec_audit.log w,
+  /var/log/nginx/access.log w,
+  /var/log/nginx/error.log w,
+  /var/log/nginx/host.access.log w,
+
+  # Add your directories and files here
+
+}
