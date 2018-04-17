@@ -8,7 +8,7 @@ First steps:
 - Etckeeper
 - Screen
 - IPv6?
-- OpenSSH
+- OpenSSH (SSHD-config already uploaded)
 - APT - sources.list-generation && unattended upgrades
 - Firehol
 - Fail2Ban
@@ -19,7 +19,7 @@ Backups:
 - Automysqlbackup
 
 Jails/Container:
-- Jailkit
+- Jailkit (configs already uploaded)
 - Firejail
 - Docker for Collabora
 
@@ -29,8 +29,8 @@ DB- and Caching-Services:
 - Memcached
 
 Web-Services:
-- NGINX with Modsecurity
-- PHP7.2-fpm
+- NGINX with Modsecurity (configs already uploaded)
+- PHP7.2-fpm (configs already uploaded)
 
 Mail-Services:
 - postfix & postgrey
@@ -38,10 +38,10 @@ Mail-Services:
 - mailman
 
 Cloud-Services:
-- Nextcloud with Collabora Online
+- Nextcloud with Collabora Online (NGINX config already uploaded)
 
 Hardening & Pentesting:
-- AppArmor
+- AppArmor (NGINX config already uploaded)
 - Lynis
 - Nessus
 
