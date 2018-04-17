@@ -18,14 +18,26 @@ Backups:
 - Automatic Backups with rsnapshot
 - Automysqlbackup
 
-Services:
-- AppArmor
+Jails/Container:
+- Jailkit
+- Firejail
+- Docker for Collabora
+
+Web-Services:
 - NGINX with Modsecurity
 - MariaDB
 - PHP7.2-fpm
 
-Hardening & Pentesting:
+Mail-Services:
+- postfix & postgrey
+- dovecot
+- mailman
 
+Cloud-Services:
+- Nextcloud with Collabora Online
+
+Hardening & Pentesting:
+- AppArmor
 - Lynis
 - Nessus
 
@@ -38,11 +50,8 @@ Monitoring
 - monit
 - logwatch
 
-
 Malware, IDS, IPS:
 - Malware: rkhunter, maldet
-- 
-
 
 tbc
 
