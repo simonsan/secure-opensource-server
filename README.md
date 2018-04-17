@@ -5,7 +5,7 @@ All used configs will be found here.
 
 First steps:
 - Usermanagement
-- Etckepper
+- Etckeeper
 - Screen
 - IPv6?
 - OpenSSH
